@@ -5,15 +5,19 @@ class Elastidiff < Formula
 
   if OS.linux?
     url "https://github.com/jvia/elastidiff/releases/download/0.1.0/elastidiff-linux-amd64.zip"
-    sha256 "168612e8b212ee10edbab16a34bfee206fbbd8965d4e5c4fc482bfb81085239e"
+    sha256 "05d61e95cd7233fdebc85517ca00f4b89580f5c1b2fa7c8a74615b2727b0286d"
   else
     url "https://github.com/jvia/elastidiff/releases/download/0.1.0/elastidiff-macos-amd64.zip"
-    sha256 "0236e4306a55576e6f1a9f7b3dcabd536e099a93af2fb6df54a51a1db9ba97a3"
+    sha256 "8852ed0d63ced4370c005d2b2c027cd61574c57ee4d8b6c724b9ef2252afcf1f"
   end
 
   bottle :unneeded
 
   def install
-    bin.install "elastidiff"
+    if OS.linux?
+      bin.install "elastidiff-linux-amd64" => "elastidiff"
+    else
+      bin.install "elastidiff-macos-amd64" => "elastidiff"
+    end
   end
 end
