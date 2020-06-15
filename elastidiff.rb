@@ -5,10 +5,10 @@ class Elastidiff < Formula
 
   if OS.linux?
     url "https://github.com/jvia/elastidiff/releases/download/0.1.0/elastidiff-linux-amd64.zip"
-    sha256 "f4be18efcd82726e441f8feba7b278417b79d19b0655e66437b4fecd131192b1"
+    sha256 "168612e8b212ee10edbab16a34bfee206fbbd8965d4e5c4fc482bfb81085239e"
   else
     url "https://github.com/jvia/elastidiff/releases/download/0.1.0/elastidiff-macos-amd64.zip"
-    sha256 "801d832fcb9b03a6a55ab6d8a1197a2f882e5d64503558e410058a35c271d62a"
+    sha256 "0236e4306a55576e6f1a9f7b3dcabd536e099a93af2fb6df54a51a1db9ba97a3"
   end
 
   bottle :unneeded
